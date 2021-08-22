@@ -6,14 +6,20 @@ d3.json("samples.json")
         var dropdown = d3.select("#selDataset")
         // console.log(dropdown)
         sampledata.names.forEach((sampleID) => {
-        dropdown.append("option").text(sampleID).property("value",sampleID)    
+        dropdown.append("option").text(sampleID).property("value",sampleID)
+
     });
-    
+    var selected = sampledata.names[0]
+    buildChart(selected)
+    demoData(selected)
+    washGauge(selected)
 });
 
 function optionChanged(selected){
-    // console.log(selected)
+    console.log(selected)
     buildChart(selected)
+    demoData(selected)
+    washGauge(selected)
 }
 
 function buildChart(selected) {
@@ -22,14 +28,15 @@ function buildChart(selected) {
     .then((sampledata) => {
       
         var filterData = sampledata.samples.filter(obj => obj.id == selected)
-        // console.log(filterData)
-        var ids = sampledata.samples[0].otu_ids;
+        console.log(filterData)
+        // var ids = filterData[0].otu_ids;
         // console.log(ids)
-        var sampleValues = sampledata.samples[0].sample_values;
+        var result = filterData[0]
+        var sampleValues = result.sample_values;
         // console.log(sampleValues)
-        var labels = sampledata.samples[0].otu_labels;
+        var labels = result.otu_labels;
         // console.log(labels)
-        var OTU_id = sampledata.samples[0].otu_ids;
+        var OTU_id = result.otu_ids;
         // console.log(OTU_id)
         var trace = {
             x : sampleValues.slice(0,10).reverse(),
@@ -82,17 +89,17 @@ function buildChart(selected) {
     });
 };
  
-buildChart();
+// buildChart();
 
 function demoData(sample) {
 
     d3.json("samples.json").then((sampledata) => {
-        var metaData = sampledata.metaData
-        .filter(sampleMetaData => sampleMetaData.id == sample);
+        console.log(sampledata);
+        var metaData = sampledata.metadata.filter(sampleMetaData => sampleMetaData.id == sample);
 
         var metaDataDemo = metaData[0];
 
-        var demo = d3.select("sample=metadata");
+        var demo = d3.select("#sample-metadata");
 
         // Clear Demographic panel before reloading.
         demo.html("");
@@ -104,15 +111,15 @@ function demoData(sample) {
     });
 };    
 
-demoData();
+// demoData();
 
 function washGauge(sample) {
 
     d3.json("samples.json").then((sampledata) => {
-        var metaData = sampledata.metaData
-        .filter(sampleMetaData => sampleMetaData.id == sample);
-
+        var metaData = sampledata.metadata.filter(sampleMetaData => sampleMetaData.id == sample);
+        console.log(metaData);
         var metaDataWash = metaData[0];
+        console.log(metaDataWash);
         
         var washFreq = metaDataWash.wfreq;
 
@@ -122,8 +129,7 @@ function washGauge(sample) {
               value: washFreq,
               title: { text: "Belly Button Washing Frequency Per Week" },
               type: "indicator",
-              mode: "gauge+number+delta",
-              delta: { reference: 380 },
+              mode: "gauge+number",
               gauge: {
                 axis: { range: [null, 9] },
                 steps: [
@@ -146,4 +152,6 @@ function washGauge(sample) {
     })
 };
 
-washGauge();
+// buildChart(940)
+// demoData(940)
+// washGauge(940)
