@@ -58,29 +58,30 @@ function buildChart(selected) {
             text : labels.slice(0,10).reverse(),
             type : "bar",
             orientation : "h",
-            marker: {color: "Royalblue"}
+            marker: {color: "#d65100"}
         };
 
         var data = [trace];
         // Setting layout for Bar chart.
         var layout = {
             title: "Top 10 OTU IDS",
-            margin: { t: 35, l: 160},
-            height: 600,
+            showlegend: true,
+            margin: { t: 45, l: 140},
+            height: 500,
         };
         // Plottig bar chart.
         Plotly.newPlot("bar", data, layout);
 
         // Setting trace for bubble chart.
         var trace1 = {
-            x : sampleValues,
-            y : OTU_id,
+            x : OTU_id,
+            y : sampleValues,
             mode : "markers",
             marker: {
                 size: sampleValues,
                 color: OTU_id,
-                opacity: [1, 0.8, 0.6, 0.4],
-                colorscale: "Earth"
+                colorscale: "YlOrRd",
+                type: "heatmap"
             },
             text: labels 
         };
@@ -92,8 +93,8 @@ function buildChart(selected) {
             title: "Clusters Of Bacteria Per Sample",
             xaxis: { title: "OTU ID"},
             hovermode: "closest",
-            height: 700,
-            width: 1300
+            height: 600,
+            width: 1100
         };
         
         // Plotting bubble chart.
@@ -150,8 +151,8 @@ function washGauge(selected) {
               type: "indicator",
               mode: "gauge+number",
               gauge: {
-                axis: { range: [null, 9], tickwidth: 1, tickcolor: "darkblue" },
-                    bar: { color: "#cc4e00" },
+                axis: { range: [null, 9], tickwidth: 1, tickcolor: "#fcd58c" },
+                    bar: { color: "#f9df8f" },
                     borderwidth: 2,
                     bordercolor: "#f64f19",
                 steps: [
@@ -176,8 +177,8 @@ function washGauge(selected) {
           
           // Setting layout for Gauge chart.
           var layout = {
-                width: 500,
-                height: 500,
+                width: 450,
+                height: 450,
                 margin: { t:25, r: 25, l: 25, b: 25 },
                 paper_bgcolor: "#f7f4dd",
                 font: { color: "#cc4e00", family: "Arial" }
