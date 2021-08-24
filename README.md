@@ -33,3 +33,12 @@
 ### Calling functions:
 
     All the function are called when any ID is selected. 
+    
+### Deployment:
+
+    Once everything is working and is in order, deploy the page through github. 
+    
+### Link to website:
+
+     https://cell2silicon.github.io/Plotly-Homework/
+    
