@@ -66,7 +66,7 @@ function buildChart(selected) {
         var layout = {
             title: "Top 10 OTU IDS",
             showlegend: true,
-            margin: { t: 45, l: 140},
+            margin: { t: 45, l: 140, r: 45, b: 25},
             height: 500,
         };
         // Plottig bar chart.
@@ -93,8 +93,9 @@ function buildChart(selected) {
             title: "Clusters Of Bacteria Per Sample",
             xaxis: { title: "OTU ID"},
             hovermode: "closest",
+            // margin: { t: 150, l: 140, r: 45, b: 25},
             height: 600,
-            width: 1100
+            width: 1300
         };
         
         // Plotting bubble chart.

@@ -1,5 +1,17 @@
-/* body {
+body {
 
     background-color: beige;
 
-} */
+}
+.row {
+
+    margin-top: 50px;
+    padding-bottom: 50px !important;
+
+}
+
+.container-fluid {
+
+    padding: auto;
+
+}
