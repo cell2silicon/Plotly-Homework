@@ -75,7 +75,7 @@ function buildChart(selected) {
             },
             paper_bgcolor: 'rgba(245,246,249,1)',
             plot_bgcolor: 'rgba(245,246,249,1)',
-            margin: {l: 140}
+            // margin: {l: 140}
         };  
 
         // Plottig bar chart.
@@ -110,7 +110,6 @@ function buildChart(selected) {
             xaxis: { title: "OTU ID"},
             hovermode: "closest",
             height: 600,
-            width: 1300
         };
         
         // Plotting bubble chart.
@@ -161,7 +160,7 @@ function washGauge(selected) {
         // Setting data for gauge bar
         var data = [
             {
-              domain: { x: [0, 1], y: [0, 1] },
+              domain: { 'x': [0, 1], 'y': [0, 1] },
               value: washFreq,
               title: {
                 text:'Belly Button Washing Frequency<br>Scrubs Per Week',
@@ -176,7 +175,7 @@ function washGauge(selected) {
               gauge: {
                 axis: { range: [null, 9], tickwidth: 1, tickcolor: "#fcd58c" },
                     bar: { color: "#cde2a6" },
-                    borderwidth: 2,
+                    borderwidth: 3,
                     bordercolor: "#64714c",
                 steps: [
                   { range: [0, 1], color: "#c7cfb8" },
@@ -200,9 +199,7 @@ function washGauge(selected) {
           
           // Setting layout for Gauge chart.
           var layout = {
-                width: 510,
                 height: 450,
-                margin: { t:25, r: 25, l: 25, b: 25 },
                 paper_bgcolor: "whitesmoke",
                 font: { color: "#252a1c", family: "Courier New, monospace" }
             };

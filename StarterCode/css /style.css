@@ -1,4 +1,5 @@
 body {
+    padding-top: 10px;
     background-image: url("bg.jpg");
 }
 
@@ -47,4 +48,15 @@ p {
 
 .demo {
     margin-left: 20px;
+    margin-right: 20px;
+    border: 1px solid olive;
 }
+
+/* #gauge {
+    align-content: center !important;
+} */
+
+/* #bubble {
+    align-content: center !important;
+    border: 1px solid olive;
+} */
