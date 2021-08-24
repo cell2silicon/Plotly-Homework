@@ -1,8 +1,8 @@
 // Reading Json file 
 
-d3.json("samples.json")
+d3.json("../../../StarterCode/samples.json")
     .then((sampledata) => {
-        // console.log(sampledata)
+        console.log(sampledata);
 
         // Selecting HTML ID for dropdown variable.
         var dropdown = d3.select("#selDataset")
@@ -33,7 +33,7 @@ function optionChanged(selected){
 // Function to make bar chart and bubble chart.
 function buildChart(selected) {
 
-    d3.json("samples.json")
+    d3.json("../../../StarterCode/samples.json")
     .then((sampledata) => {
         // Setting variable for the sample ID.
         var filterData = sampledata.samples.filter(obj => obj.id == selected)
@@ -124,7 +124,7 @@ function buildChart(selected) {
 function demoData(selected) {
 
     // Getting metadata ID from sample data.
-    d3.json("samples.json").then((sampledata) => {
+    d3.json("../../../StarterCode/samples.json").then((sampledata) => {
         console.log(sampledata);
         var metaData = sampledata.metadata.filter(sampleMetaData => sampleMetaData.id == selected);
 
@@ -149,7 +149,7 @@ function demoData(selected) {
 // Creating function for Wash Gauge.
 function washGauge(selected) {
 
-    d3.json("samples.json").then((sampledata) => {
+    d3.json("../../../StarterCode/samples.json").then((sampledata) => {
         var metaData = sampledata.metadata.filter(sampleMetaData => sampleMetaData.id == selected);
         
         // Getting first value in metadata.
