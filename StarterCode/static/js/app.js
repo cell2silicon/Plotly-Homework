@@ -107,13 +107,16 @@ function buildChart(selected) {
                   color: "#252a1c"
                 },
               },  
-            xaxis: { title: "OTU ID"},
+            xaxis: { title: "OTU ID",},
+            yaxis: { title: "Sample Values"},
             hovermode: "closest",
             height: 600,
         };
+
+        var config = {responsive: true}
         
         // Plotting bubble chart.
-        Plotly.newPlot("bubble", data1, layout1);  
+        Plotly.newPlot("bubble", data1, layout1, config);  
 
     });
 };
@@ -173,7 +176,7 @@ function washGauge(selected) {
               type: "indicator",
               mode: "gauge+number",
               gauge: {
-                axis: { range: [null, 9], tickwidth: 1, tickcolor: "#fcd58c" },
+                axis: { range: [0, 9], tickwidth: 1, tickcolor: "#fcd58c" },
                     bar: { color: "#cde2a6" },
                     borderwidth: 3,
                     bordercolor: "#64714c",
