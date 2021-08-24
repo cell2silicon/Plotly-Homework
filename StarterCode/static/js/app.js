@@ -200,7 +200,7 @@ function washGauge(selected) {
           
           // Setting layout for Gauge chart.
           var layout = {
-                width: 450,
+                width: 500,
                 height: 450,
                 margin: { t:25, r: 25, l: 25, b: 25 },
                 paper_bgcolor: "whitesmoke",

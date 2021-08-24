@@ -44,3 +44,11 @@ p {
     font-weight: bolder;
     font-size: large;
 }
+
+.demo {
+    margin-left: 20px;
+}
+
+/* .meter {
+    margin-left: 10px;
+} */
