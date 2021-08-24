@@ -1,17 +1,44 @@
 body {
-
-    background-color: beige;
-
-}
-.row {
-
-    margin-top: 50px;
-    padding-bottom: 50px !important;
-
+    /* background-color:whitesmoke; */
+    background-image: url("bg.jpg");
 }
 
-.container-fluid {
+.jumbotron {
+    background-image: url("tbbac.jpg");
+}
 
-    padding: auto;
+.container {
+    margin-left: 50px;
+}
 
+h5 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.test {
+    color: white;
+}
+
+.panel-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;   
+}
+
+.panel-heading {
+    background-image: url("tbbac.jpg")
+}
+
+.well {
+    background-image: url("tbbac.jpg");
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }

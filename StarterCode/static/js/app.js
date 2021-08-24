@@ -64,11 +64,20 @@ function buildChart(selected) {
         var data = [trace];
         // Setting layout for Bar chart.
         var layout = {
-            title: "Top 10 OTU IDS",
-            showlegend: true,
-            margin: { t: 45, l: 140, r: 45, b: 25},
+            title: {
+                text:'Top 10 OTU IDS',
+                font: {
+                  family: 'Courier New, monospace',
+                  size: 24,
+                  color: "#d65100"
+                },    
             height: 500,
-        };
+            },
+            paper_bgcolor: 'rgba(245,246,249,1)',
+            plot_bgcolor: 'rgba(245,246,249,1)',
+            margin: {l: 140}
+        };  
+
         // Plottig bar chart.
         Plotly.newPlot("bar", data, layout);
 
@@ -90,10 +99,16 @@ function buildChart(selected) {
 
         // Setting layout for bubble chart.
         var layout1 = {
-            title: "Clusters Of Bacteria Per Sample",
+            title: {
+                text:'Clusters Of Bacteria Per Sample',
+                font: {
+                  family: 'Courier New, monospace',
+                  size: 24,
+                  color: "#d65100"
+                },
+              },  
             xaxis: { title: "OTU ID"},
             hovermode: "closest",
-            // margin: { t: 150, l: 140, r: 45, b: 25},
             height: 600,
             width: 1300
         };
@@ -148,7 +163,14 @@ function washGauge(selected) {
             {
               domain: { x: [0, 1], y: [0, 1] },
               value: washFreq,
-              title: { text: "Belly Button Washing Frequency <br> Scrubs Per Week" },
+              title: {
+                text:'Belly Button Washing Frequency<br>Scrubs Per Week',
+                font: {
+                  family: 'Courier New, monospace',
+                  size: 24,
+                  color: "#d65100"
+                },
+              },
               type: "indicator",
               mode: "gauge+number",
               gauge: {
@@ -181,7 +203,7 @@ function washGauge(selected) {
                 width: 450,
                 height: 450,
                 margin: { t:25, r: 25, l: 25, b: 25 },
-                paper_bgcolor: "#f7f4dd",
+                paper_bgcolor: "whitesmoke",
                 font: { color: "#cc4e00", family: "Arial" }
             };
 
