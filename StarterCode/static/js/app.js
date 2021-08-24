@@ -58,7 +58,7 @@ function buildChart(selected) {
             text : labels.slice(0,10).reverse(),
             type : "bar",
             orientation : "h",
-            marker: {color: "#d65100"}
+            marker: {color: "#4b5539"}
         };
 
         var data = [trace];
@@ -69,7 +69,7 @@ function buildChart(selected) {
                 font: {
                   family: 'Courier New, monospace',
                   size: 24,
-                  color: "#d65100"
+                  color: "#252a1c"
                 },    
             height: 500,
             },
@@ -89,7 +89,7 @@ function buildChart(selected) {
             marker: {
                 size: sampleValues,
                 color: OTU_id,
-                colorscale: "YlOrRd",
+                colorscale: "Earth",
                 type: "heatmap"
             },
             text: labels 
@@ -104,7 +104,7 @@ function buildChart(selected) {
                 font: {
                   family: 'Courier New, monospace',
                   size: 24,
-                  color: "#d65100"
+                  color: "#252a1c"
                 },
               },  
             xaxis: { title: "OTU ID"},
@@ -168,26 +168,26 @@ function washGauge(selected) {
                 font: {
                   family: 'Courier New, monospace',
                   size: 24,
-                  color: "#d65100"
+                  color: "#252a1c"
                 },
               },
               type: "indicator",
               mode: "gauge+number",
               gauge: {
                 axis: { range: [null, 9], tickwidth: 1, tickcolor: "#fcd58c" },
-                    bar: { color: "#f9df8f" },
+                    bar: { color: "#cde2a6" },
                     borderwidth: 2,
-                    bordercolor: "#f64f19",
+                    bordercolor: "#64714c",
                 steps: [
-                  { range: [0, 1], color: "#ffb689" },
-                  { range: [1, 2], color: "#ffa066" },
-                  { range: [2, 3], color: "#ff8a42" },
-                  { range: [3, 4], color: "#ff741e" },
-                  { range: [4, 5], color: "#f95f00" },
-                  { range: [5, 6], color: "#d65100" },
-                  { range: [6, 7], color: "#b24400" },
-                  { range: [7, 8], color: "#8e3600" },
-                  { range: [8, 9], color: "#6b2800" }
+                  { range: [0, 1], color: "#c7cfb8" },
+                  { range: [1, 2], color: "#b6c1a3" },
+                  { range: [2, 3], color: "#a6b38e" },
+                  { range: [3, 4], color: "#95a478" },
+                  { range: [4, 5], color: "#849564" },
+                  { range: [5, 6], color: "#718056" },
+                  { range: [6, 7], color: "#5e6a47" },
+                  { range: [7, 8], color: "#4b5539" },
+                  { range: [8, 9], color: "#38402b" }
                 ],
                 threshold: {
                   line: { color: "#f4bd17", width: 4 },
@@ -204,7 +204,7 @@ function washGauge(selected) {
                 height: 450,
                 margin: { t:25, r: 25, l: 25, b: 25 },
                 paper_bgcolor: "whitesmoke",
-                font: { color: "#cc4e00", family: "Arial" }
+                font: { color: "#252a1c", family: "Courier New, monospace" }
             };
 
           // Plotting gauge chart. 
