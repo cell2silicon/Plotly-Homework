@@ -177,7 +177,7 @@ function washGauge(selected) {
               type: "indicator",
               mode: "gauge+number",
               gauge: {
-                axis: { range: [0, 9], tickwidth: 1, tickcolor: "#fcd58c" },
+                axis: { range: [0,9], tickwidth: 1, dtick: 1, tickcolor: "#fcd58c" },
                     bar: { color: "#cde2a6" },
                     borderwidth: 3,
                     bordercolor: "#64714c",
