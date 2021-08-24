@@ -77,9 +77,10 @@ function buildChart(selected) {
             plot_bgcolor: 'rgba(245,246,249,1)',
             // margin: {l: 140}
         };  
+        var config = {responsive: true}
 
         // Plottig bar chart.
-        Plotly.newPlot("bar", data, layout);
+        Plotly.newPlot("bar", data, layout, config);
 
         // Setting trace for bubble chart.
         var trace1 = {
@@ -206,8 +207,9 @@ function washGauge(selected) {
                 paper_bgcolor: "whitesmoke",
                 font: { color: "#252a1c", family: "Courier New, monospace" }
             };
+            var config = {responsive: true}
 
           // Plotting gauge chart. 
-          Plotly.newPlot('gauge', data, layout);
+          Plotly.newPlot('gauge', data, layout, config);
     })
 };
