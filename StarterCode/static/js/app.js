@@ -193,9 +193,9 @@ function washGauge(selected) {
                   { range: [8, 9], color: "#38402b" }
                 ],
                 threshold: {
-                  line: { color: "#f4bd17", width: 4 },
+                  line: { color: "whitesmoke", width: 4 },
                   thickness: 0.75,
-                  value: 9
+                  value: washFreq
                 }
               }
             }
